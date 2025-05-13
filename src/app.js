@@ -19,7 +19,8 @@ app.use(session({ secret: process.env.SUPABASE_SERVICE_ROLE_KEY, resave: false, 
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.status(200).send({ error: null, message: 'ITEC Rafaela Portal' });
+    res.redirect('/login.html');
+    // res.status(200).send({ error: null, message: 'ITEC Rafaela Portal' });
 });
 
 app.get('/register', (req, res) => {
